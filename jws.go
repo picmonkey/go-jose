@@ -364,3 +364,7 @@ func (obj JSONWebSignature) FullSerialize() string {
 
 	return string(mustSerializeJSON(raw))
 }
+
+func (obj JSONWebSignature) Payload() []byte {
+	return obj.payload
+}
