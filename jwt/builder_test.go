@@ -34,8 +34,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"gopkg.in/square/go-jose.v2"
-	"gopkg.in/square/go-jose.v2/json"
+	"github.com/square/go-jose/v3"
+	"github.com/square/go-jose/v3/json"
 )
 
 type testClaims struct {
@@ -243,7 +243,7 @@ func TestBuilderSignedAndEncrypted(t *testing.T) {
 				ExtraHeaders: map[jose.HeaderKey]interface{}{
 					jose.HeaderType:        "JWT",
 					jose.HeaderContentType: "JWT",
-					"enc": "A128CBC-HS256",
+					"enc":                  "A128CBC-HS256",
 				},
 			}}, jwe.Headers)
 			if jws, err := jwe.Decrypt(testPrivRSAKey1); assert.NoError(t, err) {

@@ -44,7 +44,7 @@ We use [gopkg.in](https://gopkg.in) for versioning.
 ([branch](https://github.com/square/go-jose/tree/v2),
 [doc](https://godoc.org/gopkg.in/square/go-jose.v2)) is the current version:
 
-    import "gopkg.in/square/go-jose.v2"
+    import "github.com/square/go-jose/v3"
 
 The old `v1` branch ([go-jose.v1](https://gopkg.in/square/go-jose.v1)) will
 still receive backported bug fixes and security fixes, but otherwise
